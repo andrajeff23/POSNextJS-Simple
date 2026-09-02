@@ -1,0 +1,70 @@
+▲ Next.js 16.3.4 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://21.0.9.54:3000
+- Environments: .env
+✓ Ready in 322ms
+✓ Running next.config.ts took 40ms
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+
+  We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+  The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+  	- include was updated to add '.next/dev/types/**/*.ts'
+
+  The following mandatory changes were made to your tsconfig.json:
+
+  	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+
+
+○ Compiling / ...
+ GET / 200 in 8.2s (next.js: 7.9s, application-code: 308ms)
+ GET /api/auth/me 401 in 747ms (next.js: 683ms, application-code: 64ms)
+ GET /api/auth/me 401 in 11ms (next.js: 4ms, application-code: 7ms)
+ POST /api/auth/login 200 in 427ms (next.js: 264ms, application-code: 163ms)
+ GET /api/products? 200 in 387ms (next.js: 339ms, application-code: 47ms)
+ GET /api/categories 200 in 379ms (next.js: 369ms, application-code: 10ms)
+ GET / 200 in 45ms (next.js: 6ms, application-code: 39ms)
+ GET /api/auth/me 200 in 49ms (next.js: 3ms, application-code: 46ms)
+ GET /api/auth/me 200 in 18ms (next.js: 3ms, application-code: 15ms)
+ GET /api/products? 200 in 36ms (next.js: 7ms, application-code: 29ms)
+ GET /api/categories 200 in 50ms (next.js: 25ms, application-code: 24ms)
+ POST /api/sales 201 in 250ms (next.js: 145ms, application-code: 105ms)
+ GET /api/products? 200 in 22ms (next.js: 3ms, application-code: 19ms)
+ GET /api/sales?startDate=2026-08-04T00%3A00%3A00.000Z&endDate=2026-09-02T04%3A21%3A43.571Z&limit=200 200 in 27ms (next.js: 7ms, application-code: 20ms)
+ GET /api/sales?limit=200 200 in 41ms (next.js: 13ms, application-code: 28ms)
+ GET /api/reports/products?days=7 200 in 593ms (next.js: 334ms, application-code: 259ms)
+ GET /api/reports/sales?days=7 200 in 624ms (next.js: 432ms, application-code: 191ms)
+ GET /api/reports/summary?days=7 200 in 655ms (next.js: 522ms, application-code: 133ms)
+ GET /api/sales?startDate=2026-08-04T00%3A00%3A00.000Z&endDate=2026-09-02T04%3A22%3A10.765Z&limit=200 200 in 25ms (next.js: 6ms, application-code: 19ms)
+ POST /api/auth/logout 200 in 172ms (next.js: 165ms, application-code: 7ms)
+ POST /api/auth/login 200 in 94ms (next.js: 3ms, application-code: 91ms)
+ GET /api/products? 200 in 24ms (next.js: 2ms, application-code: 22ms)
+ GET /api/categories 200 in 17ms (next.js: 9ms, application-code: 8ms)
+ GET / 200 in 37ms (next.js: 5ms, application-code: 31ms)
+ GET /api/auth/me 401 in 32ms (next.js: 4ms, application-code: 28ms)
+ GET /api/auth/me 401 in 53ms (next.js: 6ms, application-code: 47ms)
+ GET / 200 in 103ms (next.js: 4ms, application-code: 99ms)
+ GET /api/auth/me 401 in 32ms (next.js: 20ms, application-code: 12ms)
+ GET /api/auth/me 401 in 8ms (next.js: 2ms, application-code: 6ms)
+ POST /api/auth/login 200 in 102ms (next.js: 5ms, application-code: 97ms)
+ GET /api/products? 200 in 13ms (next.js: 4ms, application-code: 10ms)
+ GET /api/categories 200 in 17ms (next.js: 6ms, application-code: 11ms)
+ GET /api/products? 200 in 16ms (next.js: 3ms, application-code: 13ms)
+ GET /api/reports/summary?days=7 200 in 33ms (next.js: 3ms, application-code: 30ms)
+ GET /api/reports/sales?days=7 200 in 30ms (next.js: 3ms, application-code: 26ms)
+ GET /api/reports/products?days=7 200 in 31ms (next.js: 7ms, application-code: 24ms)
+ GET /api/products? 200 in 20ms (next.js: 4ms, application-code: 17ms)
+ GET /api/categories 200 in 8ms (next.js: 1.9ms, application-code: 6ms)
+ GET /api/products? 200 in 17ms (next.js: 6ms, application-code: 11ms)
+ GET / 200 in 24ms (next.js: 4ms, application-code: 21ms)
+ GET / 200 in 53ms (next.js: 4ms, application-code: 50ms)
+ GET / 200 in 28ms (next.js: 2ms, application-code: 26ms)
+ GET /api/auth/me 401 in 11ms (next.js: 4ms, application-code: 7ms)
+ GET /api/auth/me 401 in 8ms (next.js: 2ms, application-code: 5ms)
+ POST /api/auth/login 200 in 83ms (next.js: 4ms, application-code: 78ms)
+ GET /api/products? 200 in 8ms (next.js: 1.9ms, application-code: 6ms)
+ GET /api/categories 200 in 6ms (next.js: 1.5ms, application-code: 4ms)

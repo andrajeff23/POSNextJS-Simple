@@ -1,0 +1,103 @@
+// Prisma schema for POS (Point of Sale) system with auth
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  role         String   @default("cashier")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Category {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  icon      String?
+  color     String   @default("slate")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  products  Product[]
+}
+
+model Product {
+  id          String          @id @default(cuid())
+  name        String
+  sku         String?         @unique
+  barcode     String?
+  description String?
+  price       Float
+  cost        Float           @default(0)
+  stock       Int             @default(0)
+  minStock    Int             @default(5)
+  unit        String          @default("pcs")
+  image       String?
+  isActive    Boolean         @default(true)
+  categoryId  String
+  category    Category        @relation(fields: [categoryId], references: [id])
+  saleItems   SaleItem[]
+  stockMovs   StockMovement[]
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+}
+
+model Sale {
+  id            String     @id @default(cuid())
+  invoiceNo     String     @unique
+  items         SaleItem[]
+  subtotal      Float
+  discount      Float      @default(0)
+  tax           Float      @default(0)
+  total         Float
+  paidAmount    Float
+  changeAmount  Float
+  paymentMethod String     @default("cash")
+  status        String     @default("completed")
+  customerName  String?
+  note          String?
+  cashierId     String?
+  cashierName   String?
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+}
+
+model SaleItem {
+  id        String  @id @default(cuid())
+  saleId    String
+  sale      Sale    @relation(fields: [saleId], references: [id], onDelete: Cascade)
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+  qty       Int
+  price     Float
+  cost      Float
+  subtotal  Float
+  createdAt DateTime @default(now())
+}
+
+model StockMovement {
+  id         String   @id @default(cuid())
+  productId  String
+  product    Product  @relation(fields: [productId], references: [id])
+  type       String
+  reason     String
+  qty        Int
+  balance    Int
+  note       String?
+  refId      String?
+  createdAt  DateTime @default(now())
+}
+
+model Setting {
+  id    String @id @default(cuid())
+  key   String @unique
+  value String
+}
