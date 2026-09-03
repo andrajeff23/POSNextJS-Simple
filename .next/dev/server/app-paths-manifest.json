@@ -1,12 +1,6 @@
 {
-  "/api/auth/login/route": "app/api/auth/login/route.js",
-  "/api/auth/logout/route": "app/api/auth/logout/route.js",
   "/api/auth/me/route": "app/api/auth/me/route.js",
   "/api/categories/route": "app/api/categories/route.js",
   "/api/products/route": "app/api/products/route.js",
-  "/api/reports/products/route": "app/api/reports/products/route.js",
-  "/api/reports/sales/route": "app/api/reports/sales/route.js",
-  "/api/reports/summary/route": "app/api/reports/summary/route.js",
-  "/api/sales/route": "app/api/sales/route.js",
   "/page": "app/page.js"
 }
